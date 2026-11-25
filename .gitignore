@@ -2,3 +2,4 @@
 __pycache__/
 *.ics
 tool_calls.log
+.mypy_cache/

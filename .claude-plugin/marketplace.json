@@ -1,0 +1,11 @@
+{
+  "name": "rain-check",
+  "owner": { "name": "rain-check" },
+  "plugins": [
+    {
+      "name": "rain-check",
+      "source": "./plugin",
+      "description": "Rain-checks Kigali celebrations using Outlook and the weather."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "rain-check",
+  "version": "0.1.0",
+  "description": "Rain-checks Kigali celebrations: weather MCP server, rain-plan skill and a tool-call log.",
+  "mcpServers": {
+    "weather": {
+      "command": "uvx",
+      "args": ["--from", "git+https://github.com/arnold-mataba/ai_concepts", "rain-check-mcp"]
+    }
+  }
+}

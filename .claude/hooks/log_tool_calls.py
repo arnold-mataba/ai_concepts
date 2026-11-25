@@ -17,6 +17,8 @@ LOG_FILE = "tool_calls.log"
 def layer(tool_name: str) -> str:
     if tool_name.startswith("mcp__claude_ai_"):
         return "connector"
+    if tool_name.startswith("mcp__plugin_"):
+        return "plugin MCP"
     if tool_name.startswith("mcp__"):
         return "MCP server"
     if tool_name == "Skill":
