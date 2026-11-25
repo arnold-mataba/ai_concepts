@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "calendar": {
+      "command": "uv",
+      "args": ["run", "party-calendar-mcp"]
+    },
+    "weather": {
+      "command": "uv",
+      "args": ["run", "--project", "plugins/party-planner/weather-server", "party-weather-mcp"]
+    }
+  }
+}

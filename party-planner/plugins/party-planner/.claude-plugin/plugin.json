@@ -1,0 +1,5 @@
+{
+  "name": "party-planner",
+  "version": "0.1.0",
+  "description": "Rain-checks Kigali celebrations: weather MCP server, rain-plan skill, /party-check command and a tool-call trace hook."
+}

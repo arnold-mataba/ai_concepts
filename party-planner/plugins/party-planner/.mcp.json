@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "uv",
+      "args": ["run", "--project", "${CLAUDE_PLUGIN_ROOT}/weather-server", "party-weather-mcp"],
+      "env": {
+        "PARTY_SIMULATE_RAIN": "${PARTY_SIMULATE_RAIN:-0}"
+      }
+    }
+  }
+}
