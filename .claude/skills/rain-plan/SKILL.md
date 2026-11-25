@@ -17,13 +17,15 @@ description: Rain-check celebrations and parties in Kigali using the Outlook cal
 - **Indoor events: no weather check.** Do not call a weather tool for them.
 - Outdoor event already over: `get_past_weather`.
 - Outdoor event today or later: `get_forecast`.
-- Check each date once, even if several events share it.
+- Always pass the event's `start_time` and `end_time` in Kigali time, so the tool returns the rain **during the event**, not just the day.
 
 ## 3. Judge each outdoor event
 
-- Past: **rained out** if `rain_mm` is 5 or more, otherwise **dry**.
-- Upcoming: **at risk** if `rain_probability_pct` is 60 or more, or `rain_mm` is 5 or more, otherwise **looks fine**.
-- The weather values are **daily totals**, not the event's hours. Say so once.
+Judge on the event's hours (`event_rain_mm`, `event_rain_probability_pct`), not the daily totals.
+
+- Past: **rained out** if `event_rain_mm` is 2 or more, otherwise **dry**.
+- Upcoming: **at risk** if `event_rain_probability_pct` is 60 or more, or `event_rain_mm` is 2 or more, otherwise **looks fine**.
+- When the day was wet but the event's hours were not, say so: it is the most useful thing to know.
 - If a weather tool fails, say which events could not be checked. Do not guess.
 
 ## 4. Answer in this format
